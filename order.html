@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sipariş Ver | SFRBoost</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>SFRBoost</h1>
+      <nav>
+        <a href="index.html">Anasayfa</a>
+        <a href="services.html">Hizmetler</a>
+        <a href="pricing.html">Fiyatlar</a>
+        <a href="order.html">Sipariş</a>
+        <a href="#">İletişim</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="order">
+    <div class="container">
+      <h2>Sipariş Formu</h2>
+
+      <form id="orderForm">
+        <div class="form-group">
+          <label for="username">Valorant ID (Riot#123):</label>
+          <input type="text" id="username" required />
+        </div>
+
+        <div class="form-group">
+          <label for="current">Mevcut Rütbe:</label>
+          <input type="text" id="current" required />
+        </div>
+
+        <div class="form-group">
+          <label for="target">Hedef Rütbe:</label>
+          <input type="text" id="target" required />
+        </div>
+
+        <div class="form-group">
+          <label for="notes">Ekstra Not:</label>
+          <textarea id="notes" rows="4" placeholder="Örn: Offline mod istiyorum, belirli saatlerde oynayın..."></textarea>
+        </div>
+
+        <button type="submit" class="btn">Siparişi Gönder</button>
+      </form>
+
+      <div id="orderResult" style="margin-top: 20px;"></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 SFRBoost. Tüm hakları saklıdır.</p>
+  </footer>
+
+  <script>
+    document.getElementById("orderForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const username = document.getElementById("username").value;
+      const current = document.getElementById("current").value;
+      const target = document.getElementById("target").value;
+      const notes = document.getElementById("notes").value;
+
+      const result = `
+        <p><strong>Siparişiniz alındı!</strong></p>
+        <p><strong>Oyuncu:</strong> ${username}</p>
+        <p><strong>Rütbe:</strong> ${current} → ${target}</p>
+        <p><strong>Not:</strong> ${notes}</p>
+        <p>En kısa sürede sizinle iletişime geçeceğiz!</p>
+      `;
+
+      document.getElementById("orderResult").innerHTML = result;
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>

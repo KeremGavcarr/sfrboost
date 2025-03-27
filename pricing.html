@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fiyatlandırma | SFRBoost</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>SFRBoost</h1>
+      <nav>
+        <a href="index.html">Anasayfa</a>
+        <a href="services.html">Hizmetler</a>
+        <a href="pricing.html">Fiyatlar</a>
+        <a href="#">Sipariş</a>
+        <a href="#">İletişim</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="pricing">
+    <div class="container">
+      <h2>Fiyat Hesapla</h2>
+      <div class="form-group">
+        <label for="currentRank">Mevcut Rütbe:</label>
+        <select id="currentRank">
+          <option value="1">Bronz</option>
+          <option value="2">Gümüş</option>
+          <option value="3">Altın</option>
+          <option value="4">Platin</option>
+          <option value="5">Elmas</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="targetRank">Hedef Rütbe:</label>
+        <select id="targetRank">
+          <option value="2">Gümüş</option>
+          <option value="3">Altın</option>
+          <option value="4">Platin</option>
+          <option value="5">Elmas</option>
+          <option value="6">Immortal</option>
+        </select>
+      </div>
+
+      <div class="price-result">
+        <p>Tahmini Fiyat: <span id="priceOutput">₺0</span></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 SFRBoost. Tüm hakları saklıdır.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
