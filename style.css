@@ -29,7 +29,7 @@ body {
   
   .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-                url('images/hero-bg.jpg') no-repeat center center/cover;
+                url('https://raw.githubusercontent.com/keremgavcarr/sfrboost/main/images/hero-bg.jpg') no-repeat center center/cover;
     min-height: 100vh; /* Sayfanın tamamını kaplasın */
     display: flex;
     flex-direction: column;
